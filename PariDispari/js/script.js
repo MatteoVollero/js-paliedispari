@@ -10,7 +10,12 @@ function isEven(number){
 }
 
 //Faccio scegliere all'utente pari o dispari
-var pariDispari = prompt("Scegliere p(per pari) e d(per dispari): ");
+var pariDispari = "x";
+pariDispari = prompt("Scegliere p(per pari) e d(per dispari): ");
+while(pariDispari != "p" || pariDispari != "d"){
+  alert("Hai sbagliato ad inserire :(");
+  pariDispari = prompt("Scegliere p(per pari) e d(per dispari): ");
+}
 var numeroLanciato = 0;
 
 if(pariDispari == "p")
@@ -20,7 +25,9 @@ else
 
 
 //Questo ciclo andrà finchè l'utente non inserira il numero nel range giusto
+numeroLanciato =  parseInt(prompt("Inserire un numero da 1 a 5: "));
 while(numeroLanciato < 1 || numeroLanciato > 5){
+  alert("Hai inserito un numero non compreso tra 1 e 5 :(");
   numeroLanciato = parseInt(prompt("Inserire un numero da 1 a 5: "));
 }
 
